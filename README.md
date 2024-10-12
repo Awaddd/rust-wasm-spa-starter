@@ -59,7 +59,7 @@ These events are handled in JavaScript using custom hooks (`useRustCtx`) that li
    npm install
    ```
 
-3. **Run the Preact App:**
+3. **Run the Frontend:**
 
    Start the development server:
 
@@ -75,16 +75,22 @@ These events are handled in JavaScript using custom hooks (`useRustCtx`) that li
    cargo install cargo-watch
    ```
 
+   Navigate to the `app-svelte` or `app-preact` directory:
+
+   ```bash
+   cd app-svelte
+   ```
+
+   Manually build the Wasm module the first time only
+
+   ```bash
+   wasm-pack build --target web
+   ```
+
    Then run the script to watch for changes and automatically build the Wasm module:
 
    ```bash
    npm run watch:wasm
-   ```
-
-   Alternatively, you can manually build the Wasm module any time you make a code change in Rust:
-
-   ```bash
-   wasm-pack build --target web
    ```
 
 5. **Open the App:**
